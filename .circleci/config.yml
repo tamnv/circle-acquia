@@ -20,12 +20,14 @@ jobs:
             git config --global user.email $GIT_EMAIL
             git config --global user.name $GIT_USERNAME
       - run: echo 'StrictHostKeyChecking no' > ~/.ssh/config
-      - run: cat ~/.ssh/config
-
+      - save_cache:
+          key: cache-{{ .Environment.CIRCLE_SHA1 }}
+      
   deploy-acquia:
     <<: *init
     steps:
-      - run: echo 'StrictHostKeyChecking no' > ~/.ssh/config
+      - restore_cache:
+          key: cache-{{ .Environment.CIRCLE_SHA1 }}
       - run:
           command: bash scripts/deploy_to_acquia.sh
 
