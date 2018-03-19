@@ -25,7 +25,7 @@ jobs:
   deploy-acquia:
     <<: *init
     steps:
-      - checkout
+      - run: echo 'StrictHostKeyChecking no' > ~/.ssh/config
       - run:
           command: bash scripts/deploy_to_acquia.sh
 
