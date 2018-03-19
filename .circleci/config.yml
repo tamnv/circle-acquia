@@ -20,6 +20,7 @@ jobs:
             git config --global user.email $GIT_EMAIL
             git config --global user.name $GIT_USERNAME
       - run: echo 'StrictHostKeyChecking no' > ~/.ssh/config
+      - run: cat ~/.ssh/config
 
   deploy-acquia:
     <<: *init
