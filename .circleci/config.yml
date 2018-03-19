@@ -16,5 +16,7 @@ jobs:
       - run:
           name: Config github account
           command: |
-            git status
+            composer config --global github-oauth.github.com $GIT_TOKEN
+            git config --global user.email $GIT_EMAIL
+            git config --global user.name $GIT_USERNAME
             git config --list
