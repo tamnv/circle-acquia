@@ -21,10 +21,10 @@ jobs:
             git config --global user.name $GIT_USERNAME
 
   deploy-acquia:
-      <<: *init
-      steps:
-        - run:
-          command: bash scripts/deploy_to_acquia.sh
+    <<: *init
+    steps:
+      - run:
+        command: bash scripts/deploy_to_acquia.sh
 
 workflows:
   version: 2
