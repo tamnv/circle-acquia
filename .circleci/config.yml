@@ -26,14 +26,9 @@ jobs:
         - run:
           command: bash scripts/deploy_to_acquia.sh
 
-# workflows:
-#   version: 2
-#   multi-build-flow:
-#     jobs:
-#       - deploy-acquia:
-#           requires:
-#             - build
-#           filters:
-#             branches:
-#               only:
-#                 - master
+workflows:
+  version: 2
+  multi-build-flow:
+    jobs:
+      - build
+      - deploy-acquia
