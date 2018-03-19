@@ -13,3 +13,8 @@ jobs:
     steps:
       - checkout
       - run: echo "Init circle first build"
+      - run:
+          name: Config github account
+          command: |
+            git status
+            git config --list
