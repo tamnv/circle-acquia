@@ -32,7 +32,7 @@ jobs:
       - restore_cache:
           key: cache-{{ .Environment.CIRCLE_SHA1 }}
       - run:
-          command: ls -l
+          command: bash scripts/deploy-acquia.sh
 
 workflows:
   version: 2
