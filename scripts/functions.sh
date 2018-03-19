@@ -4,7 +4,7 @@ prepare_acquia_folder() {
 
   # Prepare pantheon repo folder.
   if [ ! -d "$HOME/acquia" ]; then
-    git clone "$ACQUIA_REPO" acquia
+    git clone $ACQUIA_REPO acquia
   fi
   cd $HOME/acquia
   git fetch
