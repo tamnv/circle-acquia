@@ -1,0 +1,15 @@
+init: &init
+  working_directory: /home/circleci/d8
+  environment:
+    TZ: "/usr/share/zoneinfo/America/Los_Angeles"
+    DEBUG: "true"
+  docker:
+    - image: circleci/php:7.1
+
+version: 2
+jobs:
+  build:
+    <<: *init
+    steps:
+      - checkout
+      - run: echo "Init circle first build"
