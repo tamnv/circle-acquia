@@ -19,6 +19,7 @@ jobs:
             composer config --global github-oauth.github.com $GIT_TOKEN
             git config --global user.email $GIT_EMAIL
             git config --global user.name $GIT_USERNAME
+      - run: echo 'StrictHostKeyChecking no' > ~/.ssh/config
 
   deploy-acquia:
     <<: *init
