@@ -28,6 +28,7 @@ jobs:
   deploy-acquia:
     <<: *init
     steps:
+      - checkout
       - restore_cache:
           key: cache-{{ .Environment.CIRCLE_SHA1 }}
       - run:
