@@ -35,6 +35,6 @@ workflows:
   multi-build-flow:
     jobs:
       - build
-      - deploy-acquia
+      - deploy-acquia:
           requires:
             - build
