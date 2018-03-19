@@ -19,4 +19,21 @@ jobs:
             composer config --global github-oauth.github.com $GIT_TOKEN
             git config --global user.email $GIT_EMAIL
             git config --global user.name $GIT_USERNAME
-            git config --list
+
+  deploy-acquia:
+      <<: *init
+      steps:
+        - run:
+          command: bash scripts/deploy_to_acquia.sh
+
+workflows:
+  version: 2
+  multi-build-flow:
+    jobs:
+      - deploy-acquia:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - master
