@@ -22,7 +22,9 @@ jobs:
       - run: echo 'StrictHostKeyChecking no' > ~/.ssh/config
       - save_cache:
           key: cache-{{ .Environment.CIRCLE_SHA1 }}
-      
+          paths:
+            - ~/.ssh
+
   deploy-acquia:
     <<: *init
     steps:
