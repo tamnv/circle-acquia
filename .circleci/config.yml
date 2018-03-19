@@ -24,7 +24,7 @@ jobs:
     <<: *init
     steps:
       - run:
-        command: bash scripts/deploy_to_acquia.sh
+          command: bash scripts/deploy_to_acquia.sh
 
 workflows:
   version: 2
