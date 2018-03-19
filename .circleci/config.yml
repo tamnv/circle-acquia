@@ -23,6 +23,7 @@ jobs:
   deploy-acquia:
     <<: *init
     steps:
+      - checkout
       - run:
           command: |
             ls -l
