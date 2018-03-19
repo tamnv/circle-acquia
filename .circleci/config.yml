@@ -24,7 +24,7 @@ jobs:
     <<: *init
     steps:
       - run:
-          command: 
+          command: |
             ls -l
             bash scripts/deploy_to_acquia.sh
 
