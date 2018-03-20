@@ -23,5 +23,6 @@ rsync_repos() {
 	rsync -ar $CIRCLE_WORKING_DIRECTORY/config/ $HOME/acquia/config/
   rsync -ar $CIRCLE_WORKING_DIRECTORY/hooks/ $HOME/acquia/hooks/
   rsync -ar $CIRCLE_WORKING_DIRECTORY/vendor/ $HOME/acquia/vendor/
+  ls $HOME/acquia
   cp $CIRCLE_WORKING_DIRECTORY/load.environment.php .
 }
