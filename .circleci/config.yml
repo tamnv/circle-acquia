@@ -20,6 +20,9 @@ jobs:
             git config --global user.name $GIT_USERNAME
       - run: echo 'StrictHostKeyChecking no' > ~/.ssh/config
       - run:
+          name: Install PHP Extensions
+          command: sudo docker-php-ext-install gd
+      - run:
           name: Run composer for project
           command: sh scripts/build.sh
       - save_cache:
