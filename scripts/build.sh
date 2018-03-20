@@ -25,3 +25,5 @@ COMPOSER_PARMS="--no-ansi --no-dev --no-interaction --optimize-autoloader --no-p
 # Install Composer dependencies
 echo -e "\n${txtylw}Invoking: $FOUND install $COMPOSER_PARMS ${txtrst}"
 $FOUND install $COMPOSER_PARMS
+
+ls -l
