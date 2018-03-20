@@ -21,7 +21,7 @@ jobs:
       - run: echo 'StrictHostKeyChecking no' > ~/.ssh/config
       - run:
           name: Install PHP Extensions
-          command: sudo docker-php-ext-install gd
+          command: docker-php-ext-install gd
       - run:
           name: Run composer for project
           command: sh scripts/build.sh
