@@ -252,7 +252,6 @@ $databases = array();
  * @endcode
  */
 $config_directories['vcs'] = $app_root . '/../config/';
-print($config_directories['vcs']); die;
 /**
  * Settings:
  *
