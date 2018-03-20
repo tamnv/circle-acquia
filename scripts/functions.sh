@@ -16,7 +16,7 @@ rsync_repos() {
 	rm -rf $HOME/acquia/config
 	rm -rf $HOME/acquia/docroot
   rm -rf $HOME/acquia/hooks
-  rm -rf $HOME/vendor
+  rm -rf $HOME/acquia/vendor
   rm -f $HOME/acquia/load.environment.php
 
 	rsync -ar $CIRCLE_WORKING_DIRECTORY/docroot/ $HOME/acquia/docroot/
