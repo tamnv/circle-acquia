@@ -251,7 +251,7 @@ $databases = array();
  *   );
  * @endcode
  */
-$config_directories['vcs'] = 'sites/default/config';
+$config_directories['vcs'] = $app_root . '/../config/default';
 /**
  * Settings:
  *
