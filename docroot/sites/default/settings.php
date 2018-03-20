@@ -251,8 +251,7 @@ $databases = array();
  *   );
  * @endcode
  */
-$config_directories['vcs'] = dirname(DRUPAL_ROOT) . '/config';
-
+$config_directories['vcs'] = $app_root . '/../config/';
 /**
  * Settings:
  *
