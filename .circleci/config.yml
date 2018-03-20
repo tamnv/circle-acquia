@@ -12,6 +12,8 @@ jobs:
     <<: *init
     steps:
       - checkout
+      - restore_cache:
+          key: composer-cache
       - run:
           name: Config github account
           command: |
@@ -26,6 +28,10 @@ jobs:
       - run:
           name: Run composer for project
           command: sh scripts/build.sh
+      - save_cache:
+          key: composer-cache
+          paths:
+            - ~/.composer/cache
       - save_cache:
           key: cache-{{ .Environment.CIRCLE_SHA1 }}
           paths:
