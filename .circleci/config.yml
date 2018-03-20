@@ -36,6 +36,7 @@ jobs:
           key: cache-{{ .Environment.CIRCLE_SHA1 }}
           paths:
             - ~/.ssh
+            - ~/d8
 
   deploy-acquia:
     <<: *init
