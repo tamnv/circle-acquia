@@ -12,5 +12,6 @@ target_env=$2
 drush_alias=$site'.'$target_env
 
 # Execute a standard drush command.
-echo "Clear cache"
-drush @$drush_alias cc all
+echo "Clear cache here"
+drush @$drush_alias cr
+drush @$drush_alias cim -y
