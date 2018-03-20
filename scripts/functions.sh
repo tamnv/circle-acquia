@@ -17,6 +17,7 @@ rsync_repos() {
 	rm -rf $HOME/acquia/docroot
   rm -rf $HOME/acquia/hooks
   rm -rf $HOME/acquia/vendor
+  rm -rf $HOME/acquia/drush
   rm -f $HOME/acquia/load.environment.php
 
   mkdir -p vendor
@@ -25,6 +26,7 @@ rsync_repos() {
 	rsync -ar $CIRCLE_WORKING_DIRECTORY/config/ $HOME/acquia/config/
   rsync -ar $CIRCLE_WORKING_DIRECTORY/hooks/ $HOME/acquia/hooks/
   rsync -ar $CIRCLE_WORKING_DIRECTORY/vendor/ $HOME/acquia/vendor/
+  rsync -ar $CIRCLE_WORKING_DIRECTORY/drush/ $HOME/acquia/drush/
   ls $CIRCLE_WORKING_DIRECTORY
   cp $CIRCLE_WORKING_DIRECTORY/load.environment.php .
 }
