@@ -19,6 +19,9 @@ jobs:
             git config --global user.email $GIT_EMAIL
             git config --global user.name $GIT_USERNAME
       - run: echo 'StrictHostKeyChecking no' > ~/.ssh/config
+      - run:
+          name: Run composer for project
+          command: sh scripts/build.sh
       - save_cache:
           key: cache-{{ .Environment.CIRCLE_SHA1 }}
           paths:
