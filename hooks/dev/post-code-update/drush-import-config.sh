@@ -14,4 +14,6 @@ drush_alias=$site'.'$target_env
 # Execute a standard drush command.
 echo "Clear cache"
 drush @$drush_alias cr
+echo "Drush acquia update"
+drush acquia-update
 drush @$drush_alias cim vcs -y
