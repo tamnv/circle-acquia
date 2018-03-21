@@ -15,4 +15,4 @@ echo "Clear cache"
 drush @$drush_alias cr
 
 echo "Starting import config"
-/usr/local/bin/drush9 @$drush_alias cim vcs -y
+drush @$drush_alias cim vcs -y
