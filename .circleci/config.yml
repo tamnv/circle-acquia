@@ -54,6 +54,9 @@ jobs:
       - run:
           name: Install behat
           command: sh scripts/setup-behat.sh
+      - run:
+          name: Behat execute
+          command: test/vendor/bin/behat
 
 workflows:
   version: 2
