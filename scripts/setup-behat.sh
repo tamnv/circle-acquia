@@ -1,3 +1,3 @@
 echo "Hello behat"
 cd test
-ls -l
+composer install
