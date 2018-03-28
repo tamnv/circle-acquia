@@ -47,6 +47,14 @@ jobs:
       - run:
           command: bash scripts/deploy_to_acquia.sh
 
+  behat_test:
+    <<: *init
+    steps:
+      - checkout
+      - run:
+        name: Install behat
+        command: sh scripts/setup-behat.sh
+
 workflows:
   version: 2
   multi-build-flow:
@@ -55,3 +63,4 @@ workflows:
       - deploy-acquia:
           requires:
             - build
+      - behat_test
