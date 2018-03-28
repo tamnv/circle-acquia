@@ -58,7 +58,7 @@ jobs:
           name: Behat execute
           command: |
             ls -l
-            test/bin/behat
+            test/vendor/behat/bin/behat
 
 workflows:
   version: 2
