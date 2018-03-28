@@ -59,6 +59,7 @@ jobs:
           command: |
             cd test
             ls -l
+            test/bin/behat
 
 workflows:
   version: 2
