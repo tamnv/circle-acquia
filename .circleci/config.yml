@@ -56,7 +56,9 @@ jobs:
           command: sh scripts/setup-behat.sh
       - run:
           name: Behat execute
-          command: test/vendor/bin/behat
+          command: |
+            cd test
+            ls -l
 
 workflows:
   version: 2
