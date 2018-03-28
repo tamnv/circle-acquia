@@ -4,4 +4,4 @@ Feature: Test Features
 @api
   Scenario: Check homepage
     Given I am on the homepage
-    Then I should see the text "Welcome to This is demo site"
+    Then I should see the text "Welcome to This is sdsds site"
