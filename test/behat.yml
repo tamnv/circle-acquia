@@ -9,7 +9,7 @@ default:
   extensions:
     Behat\MinkExtension:
       selenium2: ~
-      base_url: http://ies.local
+      base_url: http://appcircle7f9goicyv8.devcloud.acquia-sites.com/
     Drupal\DrupalExtension:
       blackbox: ~
       api_driver: 'drupal'
