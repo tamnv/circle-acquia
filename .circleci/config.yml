@@ -52,8 +52,8 @@ jobs:
     steps:
       - checkout
       - run:
-        name: Install behat
-        command: sh scripts/setup-behat.sh
+          name: Install behat
+          command: sh scripts/setup-behat.sh
 
 workflows:
   version: 2
