@@ -62,6 +62,8 @@ jobs:
           name: Behat execute
           command: |
             ls -l
+            vendor/bin/behat --init
+            vendor/bin/behat -dl
             vendor/bin/behat
 
 workflows:
