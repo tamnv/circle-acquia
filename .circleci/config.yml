@@ -62,7 +62,7 @@ jobs:
           name: Behat execute
           command: |
             ls -l
-            vender/bin/behat
+            vendor/bin/behat
 
 workflows:
   version: 2
