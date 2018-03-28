@@ -51,6 +51,8 @@ jobs:
     <<: *init
     steps:
       - checkout
+      - restore_cache:
+          key: cache-{{ .Environment.CIRCLE_SHA1 }}
       - run:
           name: Install behat
           command: sh scripts/setup-behat.sh
