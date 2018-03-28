@@ -64,8 +64,11 @@ jobs:
             ls -l
             vendor/bin/behat --init
             vendor/bin/behat -dl
-            vendor/bin/behat
-
+      - run:
+          name: Starting
+          command:
+            vendor/bin/behat        
+              
 workflows:
   version: 2
   multi-build-flow:
